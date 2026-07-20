@@ -10,6 +10,43 @@ from datetime import datetime, timedelta
 
 import pandas as pd
 
+from business_rules import (
+    CAMPAIGN_TYPES,
+    CHANNEL_WEIGHTS,
+    DEVICE_WEIGHTS,
+    CUSTOMER_SEGMENT_WEIGHTS,
+)
+
+def get_channel(campaign):
+
+    channel_weights = CHANNEL_WEIGHTS[campaign]
+
+    return random.choices(
+        population=list(channel_weights.keys()),
+        weights=list(channel_weights.values()),
+        k=1
+    )[0]
+
+def get_device(channel):
+
+    device_weights = DEVICE_WEIGHTS[channel]
+
+    return random.choices(
+        population=list(device_weights.keys()),
+        weights=list(device_weights.values()),
+        k=1
+    )[0]
+
+def get_customer_segment(channel):
+
+    segment_weights = CUSTOMER_SEGMENT_WEIGHTS[channel]
+
+    return random.choices(
+        population=list(segment_weights.keys()),
+        weights=list(segment_weights.values()),
+        k=1
+    )[0]
+
 from config import (
     NUM_RECORDS,
     START_DATE,
