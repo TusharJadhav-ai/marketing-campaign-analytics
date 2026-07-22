@@ -10,12 +10,20 @@ from datetime import datetime, timedelta
 
 import pandas as pd
 
+from marketing_rules import CHANNEL_METRICS
+
 from business_rules import (
     CAMPAIGN_TYPES,
     CHANNEL_WEIGHTS,
     DEVICE_WEIGHTS,
     CUSTOMER_SEGMENT_WEIGHTS,
 )
+
+from marketing_rules import (
+    CHANNEL_METRICS,
+    CAMPAIGN_BUDGET_RANGES,
+)
+
 
 def get_channel(campaign):
 
@@ -47,6 +55,59 @@ def get_customer_segment(channel):
         k=1
     )[0]
 
+def get_marketing_metrics(channel):
+
+    metrics = CHANNEL_METRICS[channel]
+
+    ctr = round(
+        random.uniform(*metrics["CTR"]),
+        2
+    )
+
+    cpc = round(
+        random.uniform(*metrics["CPC"]),
+        2
+    )
+
+    return ctr, cpc
+
+def get_campaign_budget(campaign_type):
+
+    budget_range = CAMPAIGN_BUDGET_RANGES[campaign_type]
+
+    return random.randint(
+        budget_range[0],
+        budget_range[1]
+    )
+
+def get_marketing_metrics(channel):
+
+    metrics = CHANNEL_METRICS[channel]
+
+    ctr = round(
+        random.uniform(*metrics["CTR"]),
+        2
+    )
+
+    cpc = round(
+        random.uniform(*metrics["CPC"]),
+        2
+    )
+
+    return ctr, cpc
+
+def get_clicks(spend, cpc):
+
+    return int(spend / cpc)
+
+def get_clicks(spend, cpc):
+
+    return round(spend / cpc)
+
+def get_impressions(clicks, ctr):
+
+    return round(clicks / (ctr / 100))
+
 from config import (
     NUM_RECORDS,
     START_DATE,
@@ -70,15 +131,40 @@ date_range = (end_date - start_date).days
 records = []
 
 for i in range(NUM_RECORDS):
+    campaign_name = random.choice(CAMPAIGNS)
 
+    campaign_type = CAMPAIGN_TYPES[campaign_name]
+
+    channel = get_channel(campaign_name)
+
+    device = get_device(channel)
+
+    customer_segment = get_customer_segment(channel)
+
+    spend = get_campaign_budget(campaign_type)
+
+    region = random.choice(REGIONS)
+
+    ctr, cpc = get_marketing_metrics(channel)
+
+    clicks = get_clicks(spend, cpc)
+
+    impressions = get_impressions(clicks, ctr)
+    
     record = {
-        "Campaign_ID": i + 1,
-        "Date": start_date + timedelta(days=random.randint(0, date_range)),
-        "Campaign_Name": random.choice(CAMPAIGNS),
-        "Channel": random.choice(CHANNELS),
-        "Region": random.choice(REGIONS),
-        "Device": random.choice(DEVICES),
-        "Customer_Segment": random.choice(CUSTOMER_SEGMENTS)
+    "Campaign_ID": i + 1,
+    "Date": start_date + timedelta(days=random.randint(0, date_range)),
+    "Campaign_Name": campaign_name,
+    "Campaign_Type": campaign_type,
+    "Channel": channel,
+    "Region": random.choice(REGIONS),
+    "Device": device,
+    "Customer_Segment": customer_segment,
+    "Spend": spend,
+    "CTR": ctr,
+    "CPC": cpc,
+    "Clicks": clicks,
+    "Impressions": impressions
     }
 
     records.append(record)
@@ -86,6 +172,10 @@ for i in range(NUM_RECORDS):
 df = pd.DataFrame(records)
 
 df = df.sort_values("Date")
+
+import os
+
+print(os.getcwd())
 
 df.to_csv("data/marketing_campaigns.csv", index=False)    
 
@@ -104,3 +194,4 @@ df = pd.read_csv("data/marketing_campaigns.csv")
 
 print(df.shape)
 print(df.info())
+df.head()
