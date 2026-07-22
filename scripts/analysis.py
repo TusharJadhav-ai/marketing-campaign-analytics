@@ -13,6 +13,23 @@ from generator.marketing_rules import CHANNEL_METRICS
 from generator.config import CHANNELS
 from generator.business_rules import CAMPAIGN_TYPES
 
+from utils.validation import (
+    validate_shape,
+    validate_missing,
+    validate_duplicates,
+    validate_dtypes,
+    validate_summary
+)
+
+from utils.wrangling import (
+    convert_date,
+    add_year,
+    add_month,
+    add_quarter,
+    add_weekday
+)
+
+
 
 df = pd.read_csv("../data/marketing_campaigns.csv")
 
@@ -75,4 +92,58 @@ df[["Spend", "CTR", "CPC", "Clicks", "Impressions"]].describe().round(2)
 summary = df[["Spend", "CTR", "CPC", "Clicks", "Impressions"]].describe()
 
 summary.map(lambda x: f"{x:,.2f}")
+# %%
+len(df)
+# %%
+df.isna().sum()
+# %%
+df["Campaign_ID"].duplicated().sum()
+# %%
+df.info()
+# %%
+df["Spend"].describe()
+# %%
+df["CTR"].describe()
+# %%
+df["CPC"].describe()
+# %%
+df["Date"] = pd.to_datetime(df["Date"])
+# %%
+df["Year"] = df["Date"].dt.year
+# %%
+df.groupby("Campaign_Type")["Spend"].mean()
+# %%
+df.groupby("Channel")["CTR"].mean()
+# %%
+df.groupby("Channel")["CPC"].mean()
+# %%
+df.groupby("Channel")["Clicks"].mean()
+# %%
+validate_shape(df)
+
+validate_missing(df)
+
+validate_duplicates(df)
+
+validate_dtypes(df)
+
+validate_summary(df)
+# %%
+df = convert_date(df, "Date")
+# %%
+df = add_year(df, "Date")
+# %%
+df = add_month(df, "Date")
+# %%
+df = add_quarter(df, "Date")
+# %%
+df = add_weekday(df, "Date")
+# %%
+df.groupby("Month")["Spend"].sum()
+# %%
+df.groupby("Quarter")["CTR"].mean()
+# %%
+df.groupby("Weekday")["CPC"].mean()
+# %%
+df.groupby("Year").size()
 # %%
