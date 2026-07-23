@@ -35,6 +35,10 @@ from utils.wrangling import (
     enrich_date
 )
 
+from utils.reporting import print_section
+from utils.reporting import print_subsection
+from utils.reporting import print_business_insight
+
 # ==========================================
 # Load Dataset
 # ==========================================
@@ -43,11 +47,14 @@ df = pd.read_csv(PROJECT_ROOT / "data" / "marketing_campaigns.csv")
 df = enrich_date(df, "Date")
 
 # ==========================================
+# Wrangling
+# ==========================================
+validate_summary(df)
+
+# ==========================================
 # Channel Overview
 # ==========================================
-print("=" * 60)
-print("CHANNEL ANALYSIS")
-print("=" * 60)
+print_section("CHANNEL ANALYSIS")
 
 print(f"Total Channels : {df['Channel'].nunique()}")
 
@@ -72,6 +79,13 @@ print("\nChannel Distribution")
 print("-" * 40)
 
 print(channel_distribution)
+
+print_subsection("Channel Distribution")
+print(channel_distribution)
+
+# ==========================================
+# channel Budget Analysis
+# ==========================================
 
 channel_budget = (
     df.groupby("Channel")
@@ -100,6 +114,13 @@ print("\nChannel Budget")
 print("-" * 40)
 
 print(channel_budget)
+
+print_subsection("Channel Budget Analysis")
+print(channel_budget)
+
+# ==========================================
+# Customer Segment Performance Analysis
+# ==========================================
 
 channel_performance = (
     df.groupby("Channel")
@@ -130,11 +151,12 @@ print("-" * 40)
 
 print(channel_performance)
 
-print("\nBusiness Insight")
-print("-" * 40)
+print_subsection("Channel Performance Analysis")
+print(channel_performance)
 
-print(
-    "Google Search and Email demonstrate strong click-through performance, "
-    "while LinkedIn has the highest CPC, indicating a premium advertising channel."
-)
+business_insight = """
+• Google Search and Email demonstrate strong click-through performance,
+• while LinkedIn has the highest CPC, indicating a premium advertising channel.
+"""
+print_business_insight(business_insight)
 

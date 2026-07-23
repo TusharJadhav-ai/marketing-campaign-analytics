@@ -97,6 +97,11 @@ segment_budget["Spend Share (%)"] = (
     *100
 ).round(2)
 
+segment_budget["Total_Spend"] = (
+    segment_budget["Total_Spend"]
+    .map("{:,.0f}".format)
+)
+
 print_subsection("Customer Segment Budget Analysis")
 print(segment_budget)
 
