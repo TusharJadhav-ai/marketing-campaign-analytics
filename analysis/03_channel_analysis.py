@@ -61,7 +61,7 @@ print(f"Total Channels : {df['Channel'].nunique()}")
 print(df["Channel"].unique())
 
 # ==========================================
-# Channel Overview
+# Channel Distribution
 # ==========================================
 channel_distribution = (
     df["Channel"]
@@ -74,11 +74,6 @@ channel_distribution["Percentage"] = (
     / len(df)
     * 100
 ).round(2)
-
-print("\nChannel Distribution")
-print("-" * 40)
-
-print(channel_distribution)
 
 print_subsection("Channel Distribution")
 print(channel_distribution)
@@ -110,11 +105,6 @@ channel_budget["Total_Spend"] = (
     .map("{:,.0f}".format)
 )
 
-print("\nChannel Budget")
-print("-" * 40)
-
-print(channel_budget)
-
 print_subsection("Channel Budget Analysis")
 print(channel_budget)
 
@@ -145,11 +135,6 @@ channel_performance["Impression Share (%)"] = (
     / channel_performance["Total_Impressions"].sum()
     *100
 ).round(2)
-
-print("\nChannel Performance")
-print("-" * 40)
-
-print(channel_performance)
 
 print_subsection("Channel Performance Analysis")
 print(channel_performance)

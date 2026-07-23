@@ -51,7 +51,7 @@ df = enrich_date(df, "Date")
 validate_summary(df)
 
 # ==========================================
-# Customer Segment Overview
+# Overview
 # ==========================================
 print_section("Customer Segment Analysis")
 
@@ -60,7 +60,7 @@ print(f"Total Customer Segments : {df['Customer_Segment'].nunique()}")
 print(df["Customer_Segment"].unique())
 
 # ==========================================
-# Customer Segment Distribution
+# Distribution
 # ==========================================
 segment_distribution = (
     df["Customer_Segment"]
@@ -78,7 +78,7 @@ print_subsection("Customer Segment Distribution")
 print(segment_distribution)
 
 # ==========================================
-# Customer Segment Budget Analysis
+# Budget Analysis
 # ==========================================
 segment_budget = (
     df.groupby("Customer_Segment")
@@ -106,7 +106,7 @@ print_subsection("Customer Segment Budget Analysis")
 print(segment_budget)
 
 # ==========================================
-# Customer Segment Performance Analysis
+# Performance Analysis
 # ==========================================
 segment_performance = (
     df.groupby("Customer_Segment")
@@ -139,6 +139,9 @@ segment_performance["Impression Share (%)"] = (
 print_subsection("Customer Segment Performance Analysis")
 print(segment_performance)
 
+# ==========================================
+# Business Insight
+# ==========================================
 business_insight = """
 • Loyal customers achieve the highest average CTR (4.60%), indicating stronger engagement compared to other customer segments.
 • Returning customers contribute the highest Click Share (28.04%), making them the largest source of campaign engagement.
