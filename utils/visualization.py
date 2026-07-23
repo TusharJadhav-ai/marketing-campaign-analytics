@@ -86,4 +86,58 @@ def plot_bar_chart(
 
     plt.show()
 
+# ==========================================
+# Function 2
+# ==========================================
+
+
+def plot_horizontal_bar_chart(
+    data,
+    x,
+    y,
+    title,
+    xlabel,
+    ylabel,
+    filename=None
+):
+
+
+    """
+    Create a horizontal bar chart.
+    """
+    data = data.sort_values(y, ascending=True)
+    
+    plt.figure(figsize=(9, 5))
+
+    bars = plt.barh(data[x], data[y], height=0.65)
+
+    # Add value labels
+    # Add value labels
+    for bar in bars:
+        width = bar.get_width()
+
+        plt.text(
+        width + (data[y].max() * 0.01),
+        bar.get_y() + bar.get_height() / 2,
+        f"{width:.2f}",
+        va="center",
+        fontsize=9
+        )
+
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+
+    plt.xticks(rotation=30)
+    plt.grid(axis="y", linestyle="--", alpha=0.35)
+
+    if filename:
+        save_chart(filename)
+
+    ax = plt.gca()
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+    plt.show()
+
 
