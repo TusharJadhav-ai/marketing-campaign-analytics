@@ -39,6 +39,8 @@ from utils.reporting import print_section
 from utils.reporting import print_subsection
 from utils.reporting import print_business_insight
 
+from utils.visualization import plot_bar_chart
+
 # ==========================================
 # Load Dataset
 # ==========================================
@@ -138,6 +140,18 @@ channel_performance["Impression Share (%)"] = (
 
 print_subsection("Channel Performance Analysis")
 print(channel_performance)
+
+
+
+plot_bar_chart(
+    data=channel_performance.reset_index(),
+    x="Channel",
+    y="Average_CTR",
+    title="Average CTR by Channel",
+    xlabel="Channel",
+    ylabel="Average CTR (%)",
+    filename="channel_ctr.png"
+)
 
 business_insight = """
 • Google Search and Email demonstrate strong click-through performance,

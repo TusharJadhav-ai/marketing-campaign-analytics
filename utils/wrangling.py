@@ -42,3 +42,13 @@ def add_weekday(df, column):
     df["Weekday"] = df[column].dt.day_name()
 
     return df
+
+def enrich_date(df, column):
+
+    df = convert_date(df, column)
+    df = add_year(df, column)
+    df = add_month(df, column)
+    df = add_quarter(df, column)
+    df = add_weekday(df, column)
+
+    return df
