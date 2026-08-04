@@ -32,6 +32,8 @@ from utils.reporting import print_section
 from utils.reporting import print_subsection
 from utils.reporting import print_business_insight
 
+from utils.visualization import plot_pie_chart
+
 # ==========================================
 # Load Dataset
 # ==========================================
@@ -87,6 +89,14 @@ campaign_type_distribution["Percentage"] = (
 
 print_subsection("Campaign Type Distribution")
 print(campaign_type_distribution)
+
+plot_pie_chart(
+    data=campaign_type_distribution.reset_index(),
+    labels="Campaign_Type",
+    values="Count",
+    title="Campaign Type Distribution",
+    filename="campaign_type_distribution.png"
+)
 
 # ==========================================
 # Budget Analysis

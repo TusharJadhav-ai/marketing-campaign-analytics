@@ -41,6 +41,7 @@ from utils.reporting import print_business_insight
 
 from utils.visualization import plot_bar_chart
 from utils.visualization import plot_horizontal_bar_chart
+from utils.visualization import plot_line_chart
 
 # ==========================================
 # Load Dataset
@@ -154,15 +155,35 @@ print(channel_performance)
 #     filename="channel_ctr1.png"
 # )
 
-plot_horizontal_bar_chart(
-    data=channel_performance.reset_index(),
-    x="Channel",
-    y="Average_CTR",
-    title="Average CTR by Channel",
-    xlabel="Average CTR (%)",
-    ylabel="Channel",
-    filename="channel_ctr2.png"
-)
+# plot_horizontal_bar_chart(
+#     data=channel_performance.reset_index(),
+#     x="Channel",
+#     y="Average_CTR",
+#     title="Average CTR by Channel",
+#     xlabel="Average CTR (%)",
+#     ylabel="Channel",
+#     filename="channel_ctr2.png"
+# )
+
+# plot_line_chart(
+#     data=monthly_performance.reset_index(),
+#     x="Month",
+#     y="Total_Spend",
+#     title="Monthly Marketing Spend",
+#     xlabel="Month",
+#     ylabel="Total Spend",
+#     filename="monthly_spend.png"
+# )
+
+# plot_line_chart(
+#     data=monthly_performance.reset_index(),
+#     x="Month",
+#     y="Average_CTR",
+#     title="Monthly Average CTR",
+#     xlabel="Month",
+#     ylabel="Average CTR (%)",
+#     filename="monthly_ctr.png"
+# )
 
 business_insight = """
 • Google Search and Email demonstrate strong click-through performance,

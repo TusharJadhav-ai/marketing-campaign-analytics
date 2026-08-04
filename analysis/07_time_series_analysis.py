@@ -32,6 +32,9 @@ from utils.reporting import print_section
 from utils.reporting import print_subsection
 from utils.reporting import print_business_insight
 
+from utils.visualization import plot_line_chart
+from utils.visualization import plot_scatter_chart
+
 # ==========================================
 # Load Dataset
 # ==========================================
@@ -81,6 +84,16 @@ monthly_performance = monthly_performance.reindex(month_order)
 print_subsection("Monthly Performance Analysis")
 print(monthly_performance)
 
+# plot_line_chart(
+#     data=monthly_performance.reset_index(),
+#     x="Month",
+#     y="Average_CTR",
+#     title="Monthly Average CTR",
+#     xlabel="Month",
+#     ylabel="Average CTR (%)",
+#     filename="monthly_ctr.png"
+# )
+
 # ==========================================
 # Quarter Performance
 # ==========================================
@@ -116,6 +129,16 @@ weekday_performance = (
 
 print_subsection("Weekday Performance Analysis")
 print(weekday_performance)
+
+plot_scatter_chart(
+    data=df,
+    x="Spend",
+    y="CTR",
+    title="Spend vs CTR",
+    xlabel="Marketing Spend",
+    ylabel="CTR (%)",
+    filename="spend_vs_ctr.png"
+)
 
 # ==========================================
 # Business Insight

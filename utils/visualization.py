@@ -10,6 +10,7 @@ Reusable visualization functions for
 Business Intelligence reporting.
 """
 from pathlib import Path
+from matplotlib.ticker import StrMethodFormatter
 
 import matplotlib.pyplot as plt
 
@@ -140,4 +141,154 @@ def plot_horizontal_bar_chart(
 
     plt.show()
 
+# ==========================================
+# Function 3
+# ==========================================
+def plot_line_chart(
+    data,
+    x,
+    y,
+    title,
+    xlabel,
+    ylabel,
+    filename=None
+):
+    """
+    Create a line chart.
+    """
 
+    plt.figure(figsize=(10, 5))
+
+    plt.plot(
+        data[x],
+        data[y],
+        marker="o",
+        markersize=7,
+        linewidth=2.5
+    )
+
+    # Add value labels
+    for x_value, y_value in zip(data[x], data[y]):
+        plt.annotate(
+        f"{y_value:.2f}",
+        (x_value, y_value),
+        xytext=(0, 8),
+        textcoords="offset points",
+        ha="center",
+        fontsize=8
+    )
+
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+
+    plt.grid(
+        linestyle="--",
+        alpha=0.35
+    )
+
+    ax = plt.gca()
+    # ax.spines["top"].set_visible(False)
+    # ax.spines["right"].set_visible(False)
+
+    # plt.margins(y=0.08)
+
+    plt.ylim(
+        data[y].min() - 0.03,
+        data[y].max() + 0.03
+        )
+
+    if filename:
+        save_chart(filename)
+
+    plt.show()
+
+# ==========================================
+# Function 5
+# ==========================================
+def plot_pie_chart(
+    data,
+    labels,
+    values,
+    title,
+    explode=None,
+    filename=None
+):
+    """
+    Create a pie chart.
+    """
+
+    plt.figure(figsize=(7,7))
+
+    explode = (0.03, 0, 0, 0)
+
+    plt.pie(
+        data[values],
+        labels=data[labels],
+        explode=explode,
+        autopct="%1.1f%%",
+        startangle=140,
+        shadow=True,
+        wedgeprops={
+            "edgecolor": "white",
+            "linewidth": 1
+        },
+        textprops={
+            "fontsize":11
+        }
+    )
+
+    plt.axis("equal")
+    plt.title(title)
+
+    plt.gca().xaxis.set_major_formatter(
+    StrMethodFormatter('{x:,.0f}')
+)
+    if filename:
+        save_chart(filename)
+
+    plt.show()
+
+# ==========================================
+# Function 6
+# ==========================================
+def plot_scatter_chart(
+    data,
+    x,
+    y,
+    title,
+    xlabel,
+    ylabel,
+    filename=None
+):
+    """
+    Create a scatter chart.
+    """
+
+    plt.figure(figsize=(11, 6))
+
+    plt.scatter(
+        data[x],
+        data[y],
+        s=14,
+        alpha=0.35,
+        edgecolors="white",
+        linewidth=0.2
+    )
+
+    plt.title(title, fontsize=16, fontweight="bold")
+    plt.xlabel(xlabel, fontsize=12)
+    plt.ylabel(ylabel, fontsize=12)
+    plt.tight_layout()
+
+    plt.grid(
+        linestyle="--",
+        alpha=0.35
+    )
+
+    
+
+    if filename:
+        save_chart(filename)
+
+    plt.show()
