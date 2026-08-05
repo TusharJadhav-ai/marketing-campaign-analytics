@@ -6,9 +6,11 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.11.1-orange)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-End-to-end Marketing Campaign Analytics project built using Python to perform Business Intelligence reporting, Exploratory Data Analysis (EDA), KPI analysis, and reusable data visualization.
+End-to-end Marketing Campaign Analytics solution that transforms raw campaign data into actionable Business Intelligence using Python, Exploratory Data Analysis (EDA), KPI reporting, and reusable visualization modules.
 
 ---
+
+## 📑 Table of Contents
 
 ## 🚀 Project Overview
 
