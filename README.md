@@ -216,14 +216,19 @@ The project includes reusable visualization modules to support exploratory analy
 
 ---
 
-## 💡 Key Business Insights
+# 💡 Key Business Insights
 
-- Email campaigns achieve the highest average CTR.
-- Mobile generates the majority of clicks and impressions.
-- Loyal customers demonstrate stronger engagement.
-- Q4 records the highest marketing investment.
-- Marketing spend alone does not directly increase CTR.
+- 📈 **Campaign performance remained consistent**, with average monthly CTR ranging between **3.3% and 3.6%**, indicating stable customer engagement throughout the year.
 
+- 🎯 **Marketing spend alone does not guarantee higher engagement.** The analysis suggests that campaign targeting and content quality have a greater impact on CTR than budget size.
+
+- 📊 **Campaign types are well balanced**, with Promotional, Seasonal, and Festival campaigns each contributing approximately **30%** of the total marketing mix.
+
+- 📣 **Channel-level performance analysis** enables marketers to identify the highest-performing platforms and optimize budget allocation.
+
+- 📉 **Monthly trend analysis** helps identify seasonal performance variations and supports better campaign planning.
+
+- 🚀 **Reusable analytics modules** allow the same workflow to be applied to new datasets with minimal code changes, improving scalability and maintainability.
 ---
 
 ## 🚀 Future Enhancements
