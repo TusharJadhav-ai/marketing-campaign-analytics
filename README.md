@@ -40,6 +40,14 @@ The project covers the complete analytics workflow:
 
 ---
 
+## ## 🎯 Business Problem
+
+Marketing teams invest significant budgets across multiple digital channels, campaigns, and customer segments. However, without structured analysis, it is difficult to identify which campaigns generate the highest engagement and deliver the best return on investment.
+
+This project demonstrates an end-to-end analytics workflow that transforms raw marketing campaign data into actionable Business Intelligence using Python. The analysis focuses on campaign performance, customer engagement, click-through rates (CTR), conversion metrics, marketing spend, and business KPIs to support data-driven decision-making.
+
+---
+
 ## 🎯 Business Objectives
 
 - Analyze campaign effectiveness
