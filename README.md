@@ -12,6 +12,17 @@ End-to-end Marketing Campaign Analytics solution that transforms raw campaign da
 
 ## 📑 Table of Contents
 
+- [🚀 Project Overview](#-project-overview)
+- [🎯 Business Problem](#-business-problem)
+- [📊 Project Workflow](#-project-workflow)
+- [🛠 Technology Stack](#-technology-stack)
+- [📂 Project Structure](#-project-structure)
+- [📈 Sample Visualizations](#-sample-visualizations)
+- [💡 Key Insights](#-key-insights)
+- [⚙️ Installation](#️-installation)
+- [🚀 Future Improvements](#-future-improvements)
+- [👨‍💻 About Me](#-about-me)
+
 ## 🚀 Project Overview
 
 Marketing teams invest millions across multiple digital channels. This project analyzes campaign performance to identify trends, optimize marketing spend, and generate business insights through data-driven reporting.
