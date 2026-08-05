@@ -81,15 +81,18 @@ The project follows a structured analytics workflow beginning with raw campaign 
 
 ---
 
-## 🛠 Technology Stack
+---
 
-| Category | Tools |
-|----------|------|
-| Language | Python |
-| Data Analysis | Pandas, NumPy |
-| Visualization | Matplotlib |
-| Version Control | Git & GitHub |
-| IDE | Visual Studio Code |
+# 🛠 Technology Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| **Programming** | Python 3.14 |
+| **Data Analysis** | Pandas, NumPy |
+| **Visualization** | Matplotlib |
+| **Development Environment** | VS Code, Jupyter Notebook |
+| **Version Control** | Git, GitHub |
+| **Data Storage** | CSV Files |
 
 ---
 
