@@ -44,7 +44,53 @@ The project covers the complete analytics workflow:
 
 Marketing teams invest significant budgets across multiple digital channels, campaigns, and customer segments. However, without structured analysis, it is difficult to identify which campaigns generate the highest engagement and deliver the best return on investment.
 
-This project demonstrates an end-to-end analytics workflow that transforms raw marketing campaign data into actionable Business Intelligence using Python. The analysis focuses on campaign performance, customer engagement, click-through rates (CTR), conversion metrics, marketing spend, and business KPIs to support data-driven decision-making.
+This project demonstrates an end-to-end analytics workflow that transforms raw marketing campaign data into actionable Business Intelligence using Python. The solution applies Exploratory Data Analysis (EDA), KPI reporting, and reusable visualization modules to evaluate campaign effectiveness, customer engagement, click-through rates (CTR), marketing spend, and conversion performance. The resulting insights support data-driven marketing decisions and campaign optimization.
+
+---
+
+## 📊 Project Workflow
+
+```text
+Raw Marketing Campaign Data
+            │
+            ▼
+──────────────────────────────
+      Data Validation
+──────────────────────────────
+            │
+            ▼
+──────────────────────────────
+      Data Cleaning
+──────────────────────────────
+            │
+            ▼
+──────────────────────────────
+   Feature Engineering
+──────────────────────────────
+            │
+            ▼
+──────────────────────────────
+ Exploratory Data Analysis
+──────────────────────────────
+            │
+            ▼
+──────────────────────────────
+   KPI Calculations
+──────────────────────────────
+            │
+            ▼
+──────────────────────────────
+ Business Intelligence Reports
+──────────────────────────────
+            │
+            ▼
+──────────────────────────────
+ Reusable Visualizations
+──────────────────────────────
+            │
+            ▼
+Business Insights & Decision Support
+```
 
 ---
 
