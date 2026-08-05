@@ -229,6 +229,9 @@ The project includes reusable visualization modules to support exploratory analy
 - 📉 **Monthly trend analysis** helps identify seasonal performance variations and supports better campaign planning.
 
 - 🚀 **Reusable analytics modules** allow the same workflow to be applied to new datasets with minimal code changes, improving scalability and maintainability.
+
+- 🚀 **Built using a modular and reusable architecture** enabling the analytics workflow to be extended to new marketing datasets with minimal code changes.
+
 ---
 
 ## 🚀 Future Enhancements
