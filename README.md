@@ -162,14 +162,57 @@ This project follows a modular architecture where data generation, business anal
 
 ---
 
-## 📷 Sample Visualizations
+# 📈 Sample Visualizations
 
-> *(We'll add screenshots here once we organize the images folder.)*
+The project includes reusable visualization modules to support exploratory analysis and Business Intelligence reporting. Below are a few sample outputs generated from the synthetic marketing campaign dataset.
 
-- Channel Performance
-- Monthly CTR Trend
-- Campaign Distribution
-- Spend vs CTR Scatter Plot
+---
+
+## 1️⃣ Monthly Average CTR Trend
+
+![Monthly CTR](images/monthly_average_ctr.png)
+
+**Business Insight**
+
+- Monthly CTR remained relatively stable between **3.3% and 3.6%**.
+- September recorded the highest average CTR, indicating stronger campaign engagement.
+- May showed the lowest CTR, highlighting a potential opportunity for campaign optimization.
+
+---
+
+## 2️⃣ Campaign Type Distribution
+
+![Campaign Type Distribution](images/campaign_type_distribution.png)
+
+**Business Insight**
+
+- Promotional, Seasonal, and Festival campaigns contribute almost equally to the marketing mix.
+- Clearance campaigns represent a much smaller share of total campaigns.
+- A balanced campaign portfolio enables consistent customer engagement throughout the year.
+
+---
+
+## 3️⃣ Marketing Spend vs CTR
+
+![Spend vs CTR](images/spend_vs_ctr.png)
+
+**Business Insight**
+
+- Higher marketing spend does not always result in higher CTR.
+- The scatter plot suggests that campaign quality and targeting may have a stronger influence on engagement than budget alone.
+- This visualization helps identify opportunities to optimize marketing ROI.
+
+---
+
+## 4️⃣ Average CTR by Channel
+
+![Average CTR by Channel](images/average_ctr_by_channel.png)
+
+**Business Insight**
+
+- Marketing channels exhibit varying levels of customer engagement.
+- Comparing average CTR across channels helps prioritize investment toward higher-performing platforms.
+- Channel-level KPIs support more informed budget allocation decisions.
 
 ---
 
