@@ -135,6 +135,8 @@ marketing-campaign-analytics/
 | **sql/** | SQL practice queries for campaign analytics. |
 | **utils/** | Reusable visualization utilities and plotting functions. |
 
+This project follows a modular architecture where data generation, business analysis, visualization, reporting, and reusable utilities are organized into independent components for better scalability and maintainability.
+
 ---
 
 ## 📈 Business KPIs
