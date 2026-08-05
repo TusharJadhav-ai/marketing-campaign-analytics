@@ -232,32 +232,55 @@ The project includes reusable visualization modules to support exploratory analy
 
 - 🚀 **Built using a modular and reusable architecture** enabling the analytics workflow to be extended to new marketing datasets with minimal code changes.
 
----
-
-## 🚀 Future Enhancements
-
-- Interactive Power BI Dashboard
-- Streamlit Dashboard
-- Machine Learning Campaign Prediction
-- Marketing ROI Analysis
-- Customer Lifetime Value Analysis
 
 ---
 
-## ⚙️ Installation
+## 2️⃣ 🚀 Future Improvements
+
+```markdown
+---
+
+# 🚀 Future Improvements
+
+- Build an interactive Streamlit dashboard.
+- Integrate SQL-based campaign analytics.
+- Develop a Power BI dashboard for executive reporting.
+- Add customer lifetime value (CLV) analysis.
+- Implement machine learning models for campaign performance prediction.
+- Automate report generation using Python.
+
+---
+
+# ⚙️ Installation
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/TusharJadhav-ai/marketing-campaign-analytics.git
 
-cd marketing-campaign-analytics
-
-pip install -r requirements.txt
-```
-
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 About the Author
 
 **Tushar Jadhav**
 
-Senior Data Analyst | Python | SQL | Power BI | Business Intelligence
+Senior Data Analyst with 17+ years of experience in Market Research, Business Intelligence, and Data Analytics.
+
+### Core Skills
+
+- Python
+- SQL
+- R
+- Power BI
+- Tableau
+- Market Research
+- Business Intelligence
+- Data Visualization
+
+**GitHub**
+
+https://github.com/TusharJadhav-ai
+
+**LinkedIn**
+
+http://www.linkedin.com/in/tusharjadhav-ai
