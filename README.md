@@ -50,46 +50,16 @@ This project demonstrates an end-to-end analytics workflow that transforms raw m
 
 ## 📊 Project Workflow
 
-```text
-Raw Marketing Campaign Data
-            │
-            ▼
-──────────────────────────────
-      Data Validation
-──────────────────────────────
-            │
-            ▼
-──────────────────────────────
-      Data Cleaning
-──────────────────────────────
-            │
-            ▼
-──────────────────────────────
-   Feature Engineering
-──────────────────────────────
-            │
-            ▼
-──────────────────────────────
- Exploratory Data Analysis
-──────────────────────────────
-            │
-            ▼
-──────────────────────────────
-   KPI Calculations
-──────────────────────────────
-            │
-            ▼
-──────────────────────────────
- Business Intelligence Reports
-──────────────────────────────
-            │
-            ▼
-──────────────────────────────
- Reusable Visualizations
-──────────────────────────────
-            │
-            ▼
-Business Insights & Decision Support
+```mermaid
+flowchart TD
+    A[Raw Marketing Campaign Data] --> B[Data Validation]
+    B --> C[Data Cleaning]
+    C --> D[Feature Engineering]
+    D --> E[Exploratory Data Analysis]
+    E --> F[KPI Calculations]
+    F --> G[Business Intelligence Reports]
+    G --> H[Reusable Visualizations]
+    H --> I[Business Insights & Decision Support]
 ```
 
 ---
