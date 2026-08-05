@@ -51,6 +51,7 @@ This project demonstrates an end-to-end analytics workflow that transforms raw m
 ## 📊 Project Workflow
 
 ```mermaid
+
 flowchart TD
     A[Raw Marketing Campaign Data] --> B[Data Validation]
     B --> C[Data Cleaning]
@@ -60,6 +61,7 @@ flowchart TD
     F --> G[Business Intelligence Reports]
     G --> H[Reusable Visualizations]
     H --> I[Business Insights & Decision Support]
+    
 ```
 The project follows a structured analytics workflow beginning with raw campaign data generation and validation. After cleaning and feature engineering, exploratory data analysis and KPI calculations are performed to evaluate campaign performance. The results are presented through reusable visualization modules, enabling business users to identify trends, optimize marketing spend, and support data-driven decision-making.
 
