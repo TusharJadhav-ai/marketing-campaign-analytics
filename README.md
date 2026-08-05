@@ -119,6 +119,22 @@ marketing-campaign-analytics/
 └── .gitignore
 ```
 
+### Folder Description
+
+| Folder | Purpose |
+|---------|---------|
+| **analysis/** | Business Intelligence analysis modules including KPI calculations, EDA, channel analysis, campaign analysis, and executive reporting. |
+| **dashboard/** | Dashboard components and future interactive reporting. |
+| **data/** | Generated marketing campaign datasets used throughout the project. |
+| **docs/** | Project documentation and supporting reference material. |
+| **generator/** | Synthetic data generation engine with configurable business rules. |
+| **images/** | Visualization images displayed inside the README. |
+| **notebooks/** | Interactive exploratory analysis using Jupyter Notebook. |
+| **outputs/** | Generated charts, reports, and exported analysis. |
+| **scripts/** | Data validation and automation scripts. |
+| **sql/** | SQL practice queries for campaign analytics. |
+| **utils/** | Reusable visualization utilities and plotting functions. |
+
 ---
 
 ## 📈 Business KPIs
