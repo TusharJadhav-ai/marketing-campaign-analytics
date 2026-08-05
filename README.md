@@ -4,7 +4,7 @@
 ![Pandas](https://img.shields.io/badge/Pandas-3.0.3-150458?logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-2.5.1-013243?logo=numpy&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.11.1-orange)
-![GitHub](https://img.shields.io/badge/GitHub-Portfolio-success)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 End-to-end Marketing Campaign Analytics project built using Python to perform Business Intelligence reporting, Exploratory Data Analysis (EDA), KPI analysis, and reusable data visualization.
 
