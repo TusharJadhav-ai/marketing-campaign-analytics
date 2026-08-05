@@ -97,28 +97,26 @@ The project uses a lightweight analytics stack focused on Python-based data anal
 
 ---
 
-## 📂 Project Structure
+# 📁 Project Structure
 
 ```text
-Marketing-Campaign-Analytics/
+marketing-campaign-analytics/
 │
-├── analysis/
-├── dashboard/
-├── data/
-├── docs/
-├── generator/
-├── images/
-├── notebooks/
-├── outputs/
-│   └── charts/
-├── scripts/
-├── sql/
-├── utils/
-│     └── visualization.py
+├── analysis/              # Business analysis modules
+├── dashboard/             # Dashboard files
+├── data/                  # Raw and generated datasets
+├── docs/                  # Project documentation
+├── generator/             # Synthetic data generation
+├── images/                # README images and visualizations
+├── notebooks/             # Jupyter notebooks
+├── outputs/               # Exported reports and charts
+├── scripts/               # Validation and helper scripts
+├── sql/                   # SQL queries
+├── utils/                 # Reusable visualization utilities
 │
 ├── README.md
 ├── requirements.txt
-└── TODO.md
+└── .gitignore
 ```
 
 ---
