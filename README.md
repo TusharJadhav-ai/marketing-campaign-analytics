@@ -81,8 +81,6 @@ The project follows a structured analytics workflow beginning with raw campaign 
 
 ---
 
----
-
 # 🛠 Technology Stack
 
 | Category | Technologies |
@@ -90,9 +88,12 @@ The project follows a structured analytics workflow beginning with raw campaign 
 | **Programming** | Python 3.14 |
 | **Data Analysis** | Pandas, NumPy |
 | **Visualization** | Matplotlib |
-| **Development Environment** | VS Code, Jupyter Notebook |
+| **Development Tools** | VS Code, Jupyter Notebook |
 | **Version Control** | Git, GitHub |
 | **Data Storage** | CSV Files |
+| **Project Architecture** | Modular Python Scripts |
+
+The project uses a lightweight analytics stack focused on Python-based data analysis, visualization, and version-controlled development.
 
 ---
 
