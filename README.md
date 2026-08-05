@@ -40,7 +40,7 @@ The project covers the complete analytics workflow:
 
 ---
 
-## ## 🎯 Business Problem
+## 🎯 Business Problem
 
 Marketing teams invest significant budgets across multiple digital channels, campaigns, and customer segments. However, without structured analysis, it is difficult to identify which campaigns generate the highest engagement and deliver the best return on investment.
 
